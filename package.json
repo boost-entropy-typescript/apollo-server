@@ -55,7 +55,7 @@
     "apollo-server-types": "file:packages/apollo-server-types"
   },
   "devDependencies": {
-    "@apollo/client": "3.6.5",
+    "@apollo/client": "3.6.6",
     "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/typescript-operations": "2.4.0",
     "@graphql-tools/mock": "8.6.11",
@@ -84,7 +84,7 @@
     "@types/lru-cache": "5.1.1",
     "@types/memcached": "2.2.7",
     "@types/micro": "7.3.7",
-    "@types/node": "12.20.52",
+    "@types/node": "12.20.54",
     "@types/node-fetch": "2.6.1",
     "@types/qs-middleware": "1.0.1",
     "@types/request": "2.48.8",
@@ -127,7 +127,7 @@
     "qs-middleware": "1.0.3",
     "request-promise": "4.2.6",
     "requisition": "1.7.0",
-    "rollup": "2.75.3",
+    "rollup": "2.75.4",
     "supertest": "6.2.3",
     "test-listen": "1.1.0",
     "ts-jest": "28.0.3",
