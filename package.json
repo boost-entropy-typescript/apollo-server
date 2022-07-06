@@ -54,7 +54,7 @@
   "devDependencies": {
     "@apollo/client": "3.6.9",
     "@graphql-codegen/cli": "2.6.4",
-    "@graphql-codegen/typescript-operations": "2.4.2",
+    "@graphql-codegen/typescript-operations": "2.4.3",
     "@graphql-tools/mock": "8.7.0",
     "@graphql-tools/schema": "8.5.0",
     "@graphql-tools/utils": "8.8.0",
@@ -108,6 +108,7 @@
     "jest-config": "28.1.2",
     "jest-junit": "14.0.0",
     "jest-mock-random": "1.1.1",
+    "jest-serializer-html": "7.1.0",
     "js-sha256": "0.9.0",
     "koa": "2.13.4",
     "koa-router": "10.1.1",
