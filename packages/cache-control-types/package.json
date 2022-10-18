@@ -1,7 +1,7 @@
 {
-  "name": "@apollo/server-plugin-response-cache",
-  "version": "4.0.1",
-  "description": "Apollo Server full query response cache",
+  "name": "@apollo/cache-control-types",
+  "version": "1.0.2",
+  "description": "TypeScript types for Apollo Server info.cacheControl",
   "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -15,25 +15,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apollographql/apollo-server",
-    "directory": "packages/plugin-response-cache"
+    "url": "git+https://github.com/apollographql/apollo-server.git",
+    "directory": "packages/cache-control-types/"
   },
-  "keywords": [],
+  "keywords": [
+    "apollo",
+    "graphql",
+    "typescript",
+    "node"
+  ],
   "author": "Apollo <packages@apollographql.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apollographql/apollo-server/issues"
   },
   "homepage": "https://github.com/apollographql/apollo-server#readme",
-  "engines": {
-    "node": ">=14.16.0"
-  },
-  "dependencies": {
-    "@apollo/utils.createhash": "^1.1.0",
-    "@apollo/utils.keyvaluecache": "^1.0.1"
-  },
   "peerDependencies": {
-    "@apollo/server": "^4.0.1",
-    "graphql": "^16.6.0"
+    "graphql": "14.x || 15.x || 16.x"
   }
 }
