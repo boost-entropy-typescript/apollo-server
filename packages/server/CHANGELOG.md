@@ -1,5 +1,11 @@
 # @apollo/server
 
+## 4.3.3
+
+### Patch Changes
+
+- [#7331](https://github.com/apollographql/apollo-server/pull/7331) [`9de18b34c`](https://github.com/apollographql/apollo-server/commit/9de18b34cd2ead3da0e0fbbe3eec74a84e20a5d8) Thanks [@trevor-scheer](https://github.com/trevor-scheer)! - Unpin `node-abort-controller` and update to latest unbreaking patch
+
 ## 4.3.2
 
 ### Patch Changes
