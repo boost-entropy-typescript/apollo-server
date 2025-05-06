@@ -9,7 +9,7 @@
   // It's nice to be able to see PRs for everything in the Dependency Dashboard.
   prCreation: "immediate",
   // Disable circleci manager; see apollographql/federation's renovate file for details.
-  enabledManagers: ["npm"],
+  enabledManagers: ["npm", "mise"],
   dependencyDashboard: true,
   // It seems like a nice idea to let Renovate use GitHub's native "automerge" since PRs
   // can get merged between Renovate runs. The downsides are:
@@ -152,6 +152,18 @@
     {
       matchPackageNames: ["npm"],
       allowedVersions: "9.x",
+    },
+    // ts-jest@29.3.0 adds a dependency on `type-fest` which drops support for node v14.
+    // We can take this when we drop node v14 support.
+    {
+      matchPackageNames: ["ts-jest"],
+      allowedVersions: "29.2.x",
+    },
+    // nock@14 drops support for node v14 and v16. We can take this when we drop
+    // node v16 support.
+    {
+      matchPackageNames: ["nock"],
+      allowedVersions: "13.x",
     },
     // We specifically provide a first-party integration (`expressMiddleware`
     // imported from `@apollo/server/express4`) for Express v4 because it is the
