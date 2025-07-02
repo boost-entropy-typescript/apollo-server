@@ -9,7 +9,7 @@
   // It's nice to be able to see PRs for everything in the Dependency Dashboard.
   prCreation: "immediate",
   // Disable circleci manager; see apollographql/federation's renovate file for details.
-  enabledManagers: ["npm", "mise"],
+  enabledManagers: ["npm", "mise", "custom.regex"],
   dependencyDashboard: true,
   // It seems like a nice idea to let Renovate use GitHub's native "automerge" since PRs
   // can get merged between Renovate runs. The downsides are:
@@ -20,6 +20,17 @@
   //   old branch point. GH auto-merge doesn't have that property so it's a bit more likely that
   //   a deps update could break the build if there are recent related changes.
   platformAutomerge: false,
+  // Update the version of Mise used in CircleCI.
+  customManagers: [{
+    customType: "regex",
+    managerFilePatterns: ["/^\\.circleci\/config\\.yml$/"],
+    matchStrings: ["MISE_VERSION=(?<currentValue>\\S+) "],
+    datasourceTemplate: "github-releases",
+    packageNameTemplate: "jdx/mise",
+    // mise doesn't use strict semver: the "major" number is the year, so
+    // bumping it isn't scarier than bumping the "minor" number.
+    versioningTemplate: "loose",
+  }],
   packageRules: [
     // Bunch up all non-major dependencies into a single PR.  In the common case
     // where the upgrades apply cleanly, this causes less noise and is resolved faster
